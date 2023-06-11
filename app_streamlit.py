@@ -11,7 +11,7 @@ model_heart = pickle.load(open('tubes_pasd_model.sav','rb'))
 
 # judul
 st.title("Prediksi Gagal Jantung")
-identitas, kesehatan, col3= st.columns(3) 
+#identitas, kesehatan, col3= st.columns(3) 
 # with identitas :
     # tab identitas
 Age = st.text_input('Berapa usia Anda?')
