@@ -6,7 +6,7 @@ from sklearn.preprocessing import LabelEncoder
 # st.set_page_config(page_title="heart disease", page_icon=":tada:", layout="wide")
 
 # membaca model
-model_heart = pickle.load(open('tubes_pasd_model.sav','rb'))
+model_heart = pickle.load(open('heartFailure.sav','rb'))
 
 
 # judul
@@ -71,9 +71,11 @@ if st.button('Mulai Tes'):
 
     if(HeartDisease_prediksi[0] == 1):
         diagnosis = 'Anda terindikasi gagal jantung'
+        st.error(diagnosis)
 
     else :
         diagnosis = 'Anda tidak terindikasi gagal jantung'
+        st.success(diagnosis)
 
-    st.success(diagnosis)
+    
 
